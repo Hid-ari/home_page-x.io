@@ -29,16 +29,6 @@ function addZero(i) {
 
 showTime();
 
-//document.getElementById("video-n1").addEventListener("click", function() {
-//	if (this.muted) {
-//	  this.muted = false;
-//	} else {
-//	  this.muted = true;
-//	}
-//  });
-
-//  document.getElementById("video-n1").volume = 0.3;
-
   function validateForm() {
 	var searchBox = document.querySelector('.search-box');
 	if (searchBox.value.trim() === '') {
@@ -68,30 +58,3 @@ showTime();
 	function validateForm() {
 		return true; 
 	}
-	
-	document.addEventListener('DOMContentLoaded', function() {
-		var audio = document.getElementById('audio');
-		var image = document.getElementById('video-n1');
-
-		var songList = [
-			{path: "music/GOOD DONT DIE Lyrics.mp3" },
-			{path: "music/Paperwork Audio.mp3" },
-		  ];
-		
-		  var currentSongIndex = 0;
-		
-		  image.addEventListener('click', function() {
-			if (audio.paused) {
-			  audio.play();
-			} else {
-			  audio.pause();
-			}
-		  });
-		
-		  image.addEventListener('dblclick', function() {
-			currentSongIndex = (currentSongIndex + 1) % songList.length;
-			var newSong = songList[currentSongIndex];
-			audio.src = newSong.path;
-			audio.play();
-		  });
-		});
